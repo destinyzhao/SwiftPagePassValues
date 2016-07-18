@@ -8,15 +8,21 @@
 
 import UIKit
 
-protocol DetialDelegate{
+protocol DetialDelegate:NSObjectProtocol{
     func passVauleFromDetailVC(value:String)
 }
+
+/// 声明闭包
+typealias myClosure = (String) -> Void
 
 class DetailViewController: UIViewController {
     
     @IBOutlet weak var inputTextField: UITextField!
+    // denegate
+    weak var delegate:DetialDelegate?
+    // 持有closure
+    var passValueClosure:myClosure?
     
-    var delegate:DetialDelegate!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,12 +35,30 @@ class DetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    /**
+     delegate 回传
+     
+     - parameter sender:
+     */
     @IBAction func btnClicked(sender: AnyObject) {
         
         if (delegate != nil && !self.inputTextField.text!.isEmpty) {
            
             self.delegate?.passVauleFromDetailVC(self.inputTextField.text!)
             self.navigationController?.popViewControllerAnimated(true)
+        }
+    }
+    
+    
+    /**
+     closure 回传
+     
+     - parameter sender:
+     */
+    @IBAction func closureBtnClicked(sender: UIButton) {
+        if(passValueClosure != nil && !self.inputTextField.text!.isEmpty){
+           passValueClosure!(self.inputTextField.text!)
+           self.navigationController?.popViewControllerAnimated(true)
         }
     }
     

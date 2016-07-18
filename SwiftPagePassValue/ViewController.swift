@@ -30,6 +30,16 @@ class ViewController: UIViewController,DetialDelegate {
         self.navigationController?.pushViewController(viewController, animated: true)
     }
     
+    @IBAction func closureBtnClicked(sender: UIButton) {
+        // 代码跳转
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = storyBoard.instantiateViewControllerWithIdentifier("DetailStoryBoard") as! DetailViewController
+        self.navigationController?.pushViewController(viewController, animated: true)
+        viewController.passValueClosure = { value in
+            self.textLbl.text = value
+        }
+    }
+
     /**
      委托
      - parameter value:

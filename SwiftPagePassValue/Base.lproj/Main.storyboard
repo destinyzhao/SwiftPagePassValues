@@ -36,13 +36,26 @@
                                     <action selector="detailBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gmB-Kj-ehu"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gmm-89-17D">
+                                <rect key="frame" x="20" y="245" width="280" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ldS-PV-kTw"/>
+                                </constraints>
+                                <state key="normal" title="Closure 传值"/>
+                                <connections>
+                                    <action selector="closureBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jwg-OV-BpC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Gmm-89-17D" firstAttribute="top" secondItem="avk-YE-Fpg" secondAttribute="bottom" constant="30" id="1ub-u8-EW4"/>
                             <constraint firstItem="W2E-V7-YGc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="42M-OX-6F8"/>
                             <constraint firstItem="W2E-V7-YGc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="8QK-CX-taH"/>
                             <constraint firstItem="avk-YE-Fpg" firstAttribute="top" secondItem="W2E-V7-YGc" secondAttribute="bottom" constant="50" id="8Y5-Bw-Ly1"/>
                             <constraint firstAttribute="trailing" secondItem="W2E-V7-YGc" secondAttribute="trailing" constant="20" id="e0L-EJ-Yac"/>
+                            <constraint firstAttribute="trailing" secondItem="Gmm-89-17D" secondAttribute="trailing" constant="20" id="f0G-q5-SUV"/>
+                            <constraint firstItem="Gmm-89-17D" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="rKH-JI-rFF"/>
                             <constraint firstAttribute="trailing" secondItem="avk-YE-Fpg" secondAttribute="trailing" constant="20" id="tPS-Vf-mXc"/>
                             <constraint firstItem="avk-YE-Fpg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="wdZ-fz-jGR"/>
                         </constraints>
@@ -87,6 +100,16 @@
                                     <action selector="btnClicked:" destination="b6t-Kc-Tsc" eventType="touchUpInside" id="Igp-Wl-O5l"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sSE-tT-gFb">
+                                <rect key="frame" x="20" y="254" width="280" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="wpM-gc-bqf"/>
+                                </constraints>
+                                <state key="normal" title="Closure 回传"/>
+                                <connections>
+                                    <action selector="closureBtnClicked:" destination="b6t-Kc-Tsc" eventType="touchUpInside" id="Cmr-Ne-S2m"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -95,6 +118,9 @@
                             <constraint firstAttribute="trailing" secondItem="2dK-4o-wDW" secondAttribute="trailing" constant="20" id="Gnr-w8-0Zg"/>
                             <constraint firstAttribute="trailing" secondItem="yMm-G3-M0S" secondAttribute="trailing" constant="20" id="djr-X1-NNr"/>
                             <constraint firstItem="yMm-G3-M0S" firstAttribute="top" secondItem="hpq-Fz-Vmc" secondAttribute="bottom" constant="50" id="eiw-Ll-ddK"/>
+                            <constraint firstItem="sSE-tT-gFb" firstAttribute="leading" secondItem="t96-37-YfJ" secondAttribute="leading" constant="20" id="gAk-x5-Ds3"/>
+                            <constraint firstItem="sSE-tT-gFb" firstAttribute="top" secondItem="2dK-4o-wDW" secondAttribute="bottom" constant="30" id="mWO-eV-Qj5"/>
+                            <constraint firstAttribute="trailing" secondItem="sSE-tT-gFb" secondAttribute="trailing" constant="20" id="oXL-JX-DEd"/>
                             <constraint firstItem="2dK-4o-wDW" firstAttribute="leading" secondItem="t96-37-YfJ" secondAttribute="leading" constant="20" id="qju-BL-esJ"/>
                         </constraints>
                     </view>
